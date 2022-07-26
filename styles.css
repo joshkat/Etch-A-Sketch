@@ -1,0 +1,21 @@
+*{
+    border: solid 1px black;
+}
+
+#drawingContainer{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    width: min-content;
+    /* column-count: 16; */
+}
+
+.pixels{
+    width: 28px;
+    height: 28px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: min-content;
+  }
