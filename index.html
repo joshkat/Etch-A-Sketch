@@ -9,10 +9,19 @@
 </head>
 <body>
 
-    <p> Sketch Pad </p>
-    <div id="drawingContainer">
-
+    <p style="text-align: center;"> Sketch Pad </p>
+    <div class="pageContainer">
+        <div class="controls">
+            <div id="previewColor"></div>
+            <button id="color">Color Mode</button>
+            <button>Rainbow Mode</button>
+            <button id="erase">Eraser</button>
+            <button id="clear">Clear</button>
+        </div>
+        <div id="drawingContainer">
+        </div>
     </div>
+
 </body>
     <script src="./app.js"></script>
 </html>
