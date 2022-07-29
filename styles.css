@@ -24,7 +24,14 @@
 .controls{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     
+}
+
+button{
+    font-family: American Typewriter, serif;
+    width: 100%;
 }
 
 #previewColor{
