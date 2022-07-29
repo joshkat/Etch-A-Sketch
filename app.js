@@ -23,6 +23,7 @@ drawingContainer.addEventListener('mouseover', (e) => { //this is for drawing
         e.target.style.background = backgroundColor;
     }
     if(currentMode == 'rainbow'){
+        rainbowButton.classList.add('currentButton')
         const randomR = Math.floor(Math.random() * 256)
         const randomG = Math.floor(Math.random() * 256)
         const randomB = Math.floor(Math.random() * 256)
