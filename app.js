@@ -1,10 +1,10 @@
 
-let defaultColor = 'grey'
-let currentColor = 'grey'
-let backgroundColor = 'white'
+let defaultColor = 'grey';
+let currentColor = 'grey';
+let backgroundColor = 'white';
 
-let defaultMode = 'color'
-let currentMode =  'color'
+let defaultMode = 'color';
+let currentMode =  'color';
 
 const drawingContainer = document.getElementById('drawingContainer');
 let px = 16; //pixel #
@@ -16,7 +16,18 @@ for(i = 0; i < (px*px); i++){ //for forming the grid
 }
 
 drawingContainer.addEventListener('mouseover', (e) => { //this is for drawing
-    e.target.style.background = currentColor;
+    if(currentMode == 'color'){
+        e.target.style.background = currentColor;
+    }
+    if(currentMode == 'erase'){
+        e.target.style.background = backgroundColor;
+    }
+    if(currentMode == 'rainbow'){
+        const randomR = Math.floor(Math.random() * 256)
+        const randomG = Math.floor(Math.random() * 256)
+        const randomB = Math.floor(Math.random() * 256)
+        e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
+    }
     e.stopPropagation();
 });
 
@@ -30,6 +41,7 @@ pageContainer.addEventListener('mouseover', ()=>{
 
 const colorButton = document.querySelector('#color'); //color button
 colorButton.addEventListener('click', ()=> {
+    currentMode = 'color';
     currentColor = colorPreview.value;
 });
 
@@ -44,8 +56,11 @@ clearButton.addEventListener('click', ()=> {
 const eraserButton = document.querySelector('#erase'); //erase button
 eraserButton.addEventListener('click', ()=> {
     currentMode = 'erase'
-    currentColor = 'white';
 });
 
+const rainbowButton = document.querySelector('#rainbow');
+rainbowButton.addEventListener('click', ()=> {
+    currentMode = 'rainbow';
+});
 
 

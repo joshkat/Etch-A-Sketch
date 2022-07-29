@@ -5,15 +5,15 @@
 #drawingContainer{
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-    width: min-content;
+    width: max-content;
     /* column-count: 16; */
 }
 
 .pixels{
     border: solid 1px black;
     background-color: white;
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
 }
 
 .pageContainer{
