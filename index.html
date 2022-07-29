@@ -7,20 +7,20 @@
     <title>Etch A Sketch</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+<body id="#body">
 
     <p style="text-align: center;"> Sketch Pad </p>
-    <div class="pageContainer">
-        <div class="controls">
-            <div id="previewColor"></div>
+    <div class="pageContainer" id="pageContainer">
+        <div class="controls" style="width: 200px;">
+            <input type='color' id="previewColor"></input>
             <button id="color">Color Mode</button>
-            <button>Rainbow Mode</button>
             <button id="erase">Eraser</button>
             <button id="clear">Clear</button>
+            <button> Box Size </button>
         </div>
         <div id="drawingContainer">
         </div>
-        <div class="buttonPadding" style="width: 103px;">
+        <div class="buttonPadding" style="width: 200px;">
 
         </div>
     </div>
