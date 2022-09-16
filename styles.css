@@ -8,6 +8,7 @@
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
     width: max-content;
+    position: absolute;
     /* column-count: 16; */
 }
 
@@ -28,6 +29,10 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
+    right: 35vw;
+    z-index: 1;
+    height: 500px;
 }
 
 button{
